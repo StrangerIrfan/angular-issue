@@ -1,0 +1,12 @@
+<div class="cont">
+  <h3>Getting data Posting data on API with error handling (Only 5 posts)  </h3>
+    <input type="text" class="form-control" (keyup.enter)="createPostTitle(titleInput)" #titleInput>
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let apiUser of apiUsers | slice:0:5; let i=index">
+        <h4>{{apiUser.id}}. {{apiUser.title}}</h4>
+        <p>{{apiUser.body}}</p>
+        <button class="btn btn-default" (click)="updatePostTitle(mypost)">Update title</button>
+      </li>
+    </ul>
+  </div>
+  
